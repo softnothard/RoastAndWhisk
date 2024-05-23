@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>MUGS AND TRAVEL MUGS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="photos/ccup.png">
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('cartButton').addEventListener('click', toggleCart);
+            updateCartDisplay(); 
+        });
+    </script>
+</head>
+<body>
+    <a href="index.html" class="home">
+        <header>
+            <div class="header-text">
+                <img src="photos/ccup.png" alt="CLICK ME TO START" class="logocup small">
+            </div>
+            <div class="header-text">
+                <h1 class="brandName">Roast and Whisk</h1>
+                <p class="slogan">Stirring Up Exceptional Moments</p>
+            </div>
+        </header>
+    </a>
+
+    <nav>
+        <a class="title" href="mugtmug.html"> MUGS&nbsp;&&nbsp;TRAVEL&nbsp;MUGS </a>
+        <a class="title" href="products.html"> ORDER &nbsp; COFFEE</a>
+        <a class="title" href="machine.html"> COFFEE&nbsp;MACHINES</a>
+    </nav>
+
+    <main>
+        <div class="content">
+            <div class="product">
+                <p class="product-desc priceDisplay">₱500.00</p>
+                <img class="product-img" src="photos/mug.jpg" alt="Mickey Mouse Mug" onclick="addToCart({name: 'Mickey Mouse Mug', price: 500}, 1)">
+                <p class="product-desc">The mug that brings the happiest coffee on earth. Disney fans, rejoice!</p>
+            </div>
+            <div class="product">
+                <p class="product-desc priceDisplay">₱600.00</p>
+                <img class="product-img" src="photos/mug1.jpg" alt="Build-On Brick Mug" onclick="addToCart({name: 'Build-On Brick Mug', price: 600}, 1)">
+                <p class="product-desc">For when you want to drink coffee and build something awesome at the same time.</p>
+            </div>
+            <div class="product">
+                <p class="product-desc priceDisplay">₱700.00</p>
+                <img class="product-img" src="photos/mug2.jpg" alt="Rock Climbing Mug" onclick="addToCart({name: 'Rock Climbing Mug', price: 700}, 1)">
+                <p class="product-desc">A mug that encourages you to get a grip on your coffee. No more slips!</p>
+            </div>
+            <div class="product">
+                <p class="product-desc priceDisplay">₱800.00</p>
+                <img class="product-img" src="photos/mug3.jpg" alt="Camera Lens Mug" onclick="addToCart({name: 'Camera Lens Mug', price: 800}, 1)">
+                <p class="product-desc">For photographers who need coffee to focus. Say cheese!</p>
+            </div>
+            <div class="product">
+                <p class="product-desc priceDisplay">₱900.00</p>
+                <img class="product-img" src="photos/mug4.jpg" alt="Grenade Mug" onclick="addToCart({name: 'Grenade Mug', price: 900}, 1)">
+                <p class="product-desc">Handle with care—this mug is explosive! Perfect for those who like their coffee with a bang.</p>
+            </div>
+        </div>
+
+    <div class="content">
+        <div class="product">
+            <p class="product-desc priceDisplay">₱1000.00</p>
+            <img class="product-img" src="photos/tmug.png" alt="Kinto To-Go Tumbler" onclick="addToCart({name: 'Kinto To-Go Tumbler', price: 1000}, 1)">
+            <p class="product-desc lower">The tumbler for those who like their coffee on the move. Don't leave home without it.</p>
+        </div>
+
+        <div class="product">
+            <p class="product-desc priceDisplay">₱1100.00</p>
+            <img class="product-img" src="photos/tmug1.png" alt="Oneisall Glass Tea Infuser" onclick="addToCart({name: 'Oneisall Glass Tea Infuser', price: 1100}, 1)">
+            <p class="product-desc lower">For the coffee drinker who sometimes dabbles in tea. Versatility at its finest.</p>
+        </div>
+
+        <div class="product">
+            <p class="product-desc priceDisplay">₱1200.00</p>
+            <img class="product-img" src="photos/tmug2.png" alt="MiiR Flip Traveler" onclick="addToCart({name: 'MiiR Flip Traveler', price: 1200}, 1)">
+            <p class="product-desc lower">Flip the lid and start your journey with a cup of coffee. Adventure awaits!</p>
+        </div>
+
+        <div class="product">
+            <p class="product-desc priceDisplay">₱1300.00</p>
+            <img class="product-img" src="photos/tmug3.png" alt="Kinto Travel Tumbler" onclick="addToCart({name: 'Kinto Travel Tumbler', price: 1300}, 1)">
+            <p class="product-desc lower">Travel in style with this sleek tumbler. Keeps your coffee hot and your style cool.</p>
+        </div>
+
+        <div class="product">
+            <p class="product-desc priceDisplay">₱1400.00</p>
+            <img class="product-img" src="photos/tmug4.png" alt="Ember Tumbler" onclick="addToCart({name: 'Ember Tumbler', price: 1400}, 1)">
+            <p class="product-desc lower">The tumbler that lets you control your coffee's temperature. Because sometimes, you just need the perfect sip.</p>
+        </div>
+    </div>
+
+</main>
+
+<button id="cartButton"><img src="photos/cart.png" alt="CAAAART!!!" class="button"></button> 
+<div id="cart"></div>
+
+<a href="checkout.html"><button id="checkoutButton"><img src="photos/checkout.png" alt="CHECKOUUUT!!!" class="button"></button></a>
+
+</body>
+</html>

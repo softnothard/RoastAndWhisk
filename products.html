@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ORDER COFFEE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="photos/productslogo.png">
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('cartButton').addEventListener('click', toggleCart);
+            updateCartDisplay(); 
+        });
+    </script>
+</head>
+<body>
+    <a href="index.html" class="home">
+        <header>
+            <div class="header-text">
+                <img src="photos/ccup.png" alt="CLICK ME TO START" class="logocup small">
+            </div>
+            <div class="header-text">
+                <h1 class="brandName">Roast and Whisk</h1>
+                <p class="slogan">Stirring Up Exceptional Moments</p>
+            </div>
+        </header>
+    </a>
+
+    <nav>
+        <a class="title" href="mugtmug.html"> MUGS&nbsp;&&nbsp;TRAVEL&nbsp;MUGS </a>
+        <a class="title" href="products.html"> ORDER &nbsp; COFFEE</a>
+        <a class="title" href="machine.html"> COFFEE&nbsp;MACHINES</a>
+    </nav>
+
+    <main>
+        <div class="content">
+            <div class="product">
+                <p class="product-desc priceDisplay">₱300.00</p>
+                <img class="product-img" src="photos/vienna.webp" alt="Vienna" onclick="addToCart({name: 'Vienna', price: 300}, 1)">
+                <p class="product-desc">Where your coffee's like your favorite movie—dark, dramatic, and ends with a satisfying shot.</p>
+            </div>
+            <div class="product">
+                <p class="product-desc priceDisplay">₱250.00</p>
+                <img class="product-img" src="photos/icedcoffee.webp" alt="IcedCoffee" onclick="addToCart({name: 'IcedCoffee', price: 250}, 1)">
+                <p class="product-desc">For those who can't commit to hot coffee but still want to look like a caffeine pro.</p>
+            </div>
+            <div class="product">
+                <p class="product-desc priceDisplay">₱350.00</p>
+                <img class="product-img" src="photos/cafeaulait.webp" alt="CafeAuLait" onclick="addToCart({name: 'CafeAuLait', price: 350}, 1)">
+                <p class="product-desc">Half coffee, half milk, full of commitment issues.</p>
+            </div>
+            <div class="product">
+                <p class="product-desc priceDisplay">₱400.00</p>
+                <img class="product-img" src="photos/breve.webp" alt="Breve" onclick="addToCart({name: 'Breve', price: 400}, 1)">
+                <p class="product-desc">It's like coffee and cream fell in love and had a baby—perfectly rich and delightful.</p>
+            </div>
+            <div class="product">
+                <p class="product-desc priceDisplay">₱450.00</p>
+                <img class="product-img" src="photos/mocha.webp" alt="Mocha" onclick="addToCart({name: 'Mocha', price: 450}, 1)">
+                <p class="product-desc">For when you can't decide if you want coffee or dessert, so you have both.</p>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="product">
+                <p class="product-desc priceDisplay">₱500.00</p>
+                <img class="product-img" src="photos/cafelatte.webp" alt="CafeLatte" onclick="addToCart({name: 'CafeLatte', price: 500}, 1)">
+                <p class="product-desc">Coffee's way of saying, 'Hey, let's take it slow, but still have fun!</p>
+            </div>
+            <div class="product">
+                <p class="product-desc priceDisplay">₱550.00</p>
+                <img class="product-img" src="photos/capuccino.webp" alt="Capuccino" onclick="addToCart({name: 'Capuccino', price: 550}, 1)">
+                <p class="product-desc">Like a coffee milkshake, but for adults who pretend to have their life together.</p>
+            </div>
+            <div class="product">
+                <p class="product-desc priceDisplay">₱600.00</p>
+                <img class="product-img" src="photos/cortado.webp" alt="Cortado" onclick="addToCart({name: 'Cortado', price: 600}, 1)">
+                <p class="product-desc">Because sometimes you just need to cut the nonsense and get to the good stuff.</p>
+            </div>
+            <div class="product">
+                <p class="product-desc priceDisplay">₱1100.00</p>
+                <img class="product-img" src="photos/flatwhite.webp" alt="FlatWhite" onclick="addToCart({name: 'FlatWhite', price: 1100}, 1)">
+                <p class="product-desc">It's flat, it's white, it's coffee—what more could you want?</p>
+            </div>
+            <div class="product">
+                <p class="product-desc priceDisplay">₱150.00</p>
+                <img class="product-img" src="photos/macchiato.webp" alt="Macchiato" onclick="addToCart({name: 'Macchiato', price: 150}, 1)">
+                <p class="product-desc">It's coffee with a tattoo—a little edgy, but still totally acceptable at work.</p>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="product">
+                <p class="product-desc priceDisplay">₱750.00</p>
+                <img class="product-img" src="photos/affogato.webp" alt="Affogato" onclick="addToCart({name: 'Affogato', price: 750}, 1)">
+                <p class="product-desc">When coffee literally drowns in ice cream. Talk about a sweet way to go!</p>
+            </div>
+            <div class="product">
+                <p class="product-desc priceDisplay">₱800.00</p>
+                <img class="product-img" src="photos/longmacchiato.webp" alt="LongMacchiato" onclick="addToCart({name: 'LongMacchiato', price: 800}, 1)">
+                <p class="product-desc">For those who like their coffee with extra attitude and a lot of drama.</p>
+            </div>
+            <div class="product">
+                <p class="product-desc priceDisplay">₱850.00</p>
+                <img class="product-img" src="photos/americano.webp" alt="Americano" onclick="addToCart({name: 'Americano', price: 850}, 1)">
+                <p class="product-desc">Coffee with a splash of freedom and a lot of caffeine.</p>
+            </div>
+            <div class="product">
+                <p class="product-desc priceDisplay">₱900.00</p>
+                <img class="product-img" src="photos/longblack.webp" alt="LongBlack" onclick="addToCart({name: 'LongBlack', price: 900}, 1)">
+                <p class="product-desc">Because coffee should be strong, bold, and take no prisoners.</p>
+            </div>
+            <div class="product">
+                <p class="product-desc priceDisplay">₱950.00</p>
+                <img class="product-img" src="photos/redeye.webp" alt="RedEye" onclick="addToCart({name: 'RedEye', price: 950}, 1)"> 
+                <p class="product-desc">Perfect for those mornings when you need coffee to literally punch you in the face.</p>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="product">
+                <img src="photos/filler.jpg" class="product-img filler" alt=".....">
+                <p class="product-desc">...............................................</p>
+            </div>
+            <div class="product">
+                <p class="product-desc priceDisplay">₱1000.00</p>
+                <img class="product-img" src="photos/blackeye.webp" alt="BlackEye" onclick="addToCart({name: 'BlackEye', price: 1000}, 1)">
+                <p class="product-desc">When one shot of espresso just doesn't cut it—bring on the double!</p>
+            </div>
+            <div class="product">
+                <p class="product-desc priceDisplay">₱1050.00</p>
+                <img class="product-img" src="photos/espresso.webp" alt="Espresso" onclick="addToCart({name: 'Espresso', price: 1050}, 1)">
+                <p class="product-desc">For when you need your coffee to have a 0-to-100 kind of energy.</p>
+            </div>
+            <div class="product">
+                <p class="product-desc priceDisplay">₱1100.00</p>
+                <img class="product-img" src="photos/doubleespresso.webp" alt="DoubleEspresso" onclick="addToCart({name: 'DoubleEspresso', price: 1100}, 1)">
+                <p class="product-desc">Why stop at one shot when you can have two? Get ready to bounce off the walls!</p>
+            </div>
+            <div class="product">
+                <img src="photos/filler.jpg" class="product-img filler" alt=".....">
+                <p class="product-desc">...............................................</p>
+            </div>
+        </div>
+
+</main>
+
+<button id="cartButton"><img src="photos/cart.png" alt="CAAAART!!!" class="button"></button> 
+<div id="cart"></div>
+
+<a href="checkout.html"><button id="checkoutButton"><img src="photos/checkout.png" alt="CHECKOUUUT!!!" class="button"></button></a>
+
+</body>
+</html>

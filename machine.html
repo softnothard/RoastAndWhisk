@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>COFFEE MACHINES</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="photos/machinelogo.png">
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('cartButton').addEventListener('click', toggleCart);
+            updateCartDisplay(); 
+        });
+    </script>
+</head>
+<body>
+    <a href="index.html" class="home">
+        <header>
+            <div class="header-text">
+                <img src="photos/ccup.png" alt="CLICK ME TO START" class="logocup small">
+            </div>
+            <div class="header-text">
+                <h1 class="brandName">Roast and Whisk</h1>
+                <p class="slogan">Stirring Up Exceptional Moments</p>
+            </div>
+        </header>
+    </a>
+
+    <nav>
+        <a class="title" href="mugtmug.html"> MUGS&nbsp;&&nbsp;TRAVEL&nbsp;MUGS </a>
+        <a class="title" href="products.html"> ORDER &nbsp; COFFEE</a>
+        <a class="title" href="machine.html"> COFFEE&nbsp;MACHINES</a>
+    </nav>
+
+    <main>
+        <div class="content">
+            <div class="product">
+                <p class="product-desc priceDisplay">₱2500.00</p>
+                <img class="product-img" src="photos/machine.webp" alt="Automatic Coffee Maker" onclick="addToCart({name: 'Automatic Coffee Maker', price: 2500}, 1)">
+                <p class="product-desc">For when you want coffee but don't want to lift a finger. Just set it and forget it.</p>
+            </div>
+            <div class="product">
+                <p class="product-desc priceDisplay">₱2600.00</p>
+                <img class="product-img" src="photos/machine1.webp" alt="Pourover Coffee Maker" onclick="addToCart({name: 'Pourover Coffee Maker', price: 2600}, 1)">
+                <p class="product-desc">The coffee maker that makes you feel like a barista. Who needs Starbucks when you can brew like a pro?</p>
+            </div>
+            <div class="product">
+                <p class="product-desc priceDisplay">₱2700.00</p>
+                <img class="product-img" src="photos/machine2.webp" alt="Espresso Machine" onclick="addToCart({name: 'Espresso Machine', price: 2700}, 1)">
+                <p class="product-desc">For when you need your coffee to be fancy and powerful—like a coffee CEO.</p>
+            </div>
+            <div class="product">
+                <p class="product-desc priceDisplay">₱2800.00</p>
+                <img class="product-img" src="photos/machine3.webp" alt="Satellite Coffee Brewer" onclick="addToCart({name: 'Satellite Coffee Brewer', price: 2800}, 1)">
+                <p class="product-desc">Makes coffee that’s out of this world. Perfect for those who take their caffeine to the next level.</p>
+            </div>
+            <div class="product">
+                <p class="product-desc priceDisplay">₱2900.00</p>
+                <img class="product-img" src="photos/machine4.webp" alt="Coffee Machine Urn" onclick="addToCart({name: 'Coffee Machine Urn', price: 2900}, 1)">
+                <p class="product-desc">For when you want to serve coffee to a small army. Keep the caffeine flowing!</p>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="product">
+                <p class="product-desc priceDisplay">₱3000.00</p>
+                <img class="product-img" src="photos/machine5.webp" alt="Liquid Coffee Dispensers" onclick="addToCart({name: 'Liquid Coffee Dispensers', price: 3000}, 1)">
+                <p class="product-desc">Why pour when you can dispense? It's like having a coffee fountain in your kitchen.</p>
+            </div>
+            <div class="product">
+                <p class="product-desc priceDisplay">₱3100.00</p>
+                <img class="product-img" src="photos/machine6.webp" alt="Cold Brew Coffee Maker" onclick="addToCart({name: 'Cold Brew Coffee Maker', price: 3100}, 1)">
+                <p class="product-desc">For those who prefer their coffee with a chill vibe. Perfect for hot summer days.</p>
+            </div>
+            <div class="product">
+                <p class="product-desc priceDisplay">₱3200.00</p>
+                <img class="product-img" src="photos/machine7.webp" alt="Single Cup Coffee Maker" onclick="addToCart({name: 'Single Cup Coffee Maker', price: 3200}, 1)">
+                <p class="product-desc">The perfect coffee maker for introverts—just one cup at a time, please.</p>
+            </div>
+            <div class="product">
+                <p class="product-desc priceDisplay">₱3300.00</p>
+                <img class="product-img" src="photos/machine8.webp" alt="French Coffee Press" onclick="addToCart({name: 'French Coffee Press', price: 3300}, 1)">
+                <p class="product-desc">For the classy coffee connoisseur who enjoys pressing things to the limit.</p>
+            </div>
+            <div class="product">
+                <p class="product-desc priceDisplay">₱3400.00</p>
+                <img class="product-img" src="photos/machine9.webp" alt="Vietnamese Coffee Press" onclick="addToCart({name: 'Vietnamese Coffee Press', price: 3400}, 1)"> 
+                <p class="product-desc">Brews coffee that's strong enough to wake the dead. Great for early mornings.</p>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="product">
+                <img src="photos/filler.jpg" class="product-img" alt=".....">
+                <p class="product-desc">...............................................</p>
+            </div>
+            <div class="product">
+                <p class="product-desc priceDisplay">₱3500.00</p>
+                <img class="product-img" src="photos/extra.webp" alt="Coffee Pot Warmers" onclick="addToCart({name: 'Coffee Pot Warmers', price: 3500}, 1)">
+                <p class="product-desc">Keeps your coffee warm all day long. It's like a coffee blanket.</p>
+            </div>
+            <div class="product">
+                <p class="product-desc priceDisplay">₱3500.00</p>
+                <img class="product-img" src="photos/extra1.webp" alt="Coffee Airpots" onclick="addToCart({name: 'Coffee Airpots', price: 3500}, 1)">
+                <p class="product-desc">For those who like to take their coffee on the go—like a portable coffee party.</p>
+            </div>
+            <div class="product">
+                <p class="product-desc priceDisplay">₱3700.00</p>
+                <img class="product-img" src="photos/extra2.webp" alt="Disposable Coffee Filters" onclick="addToCart({name: 'Disposable Coffee Filters', price: 3700}, 1)">
+                <p class="product-desc">Because nobody has time to clean a coffee maker. Just toss and go.</p>
+            </div>
+            <div class="product">
+                <img src="photos/filler.jpg" class="product-img" alt="....."> 
+                <p class="product-desc">...............................................</p>
+            </div>
+        </div>
+
+</main>
+
+<button id="cartButton"><img src="photos/cart.png" alt="CAAAART!!!" class="button"></button> 
+<div id="cart"></div>
+
+<a href="checkout.html"><button id="checkoutButton"><img src="photos/checkout.png" alt="CHECKOUUUT!!!" class="button"></button></a>
+
+</body>
+</html>

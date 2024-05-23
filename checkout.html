@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="photos/checkout.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Checkout - Roast and Whisk</title>
+</head>
+<body class="ship">
+    <div class="checkout-container">
+        <h1 class="checkout-title">Check Out</h1>
+
+        <div class="checkout-form">
+            <label for="payment-amount">Payment Amount (₱)</label>
+            <input type="number" id="payment-amount" placeholder="Enter payment amount" min="0" required>
+
+            <label for="customer-name">Name</label>
+            <input type="text" id="customer-name" placeholder="Enter your name" required>
+
+            <label for="customer-email">Email</label>
+            <input type="email" id="customer-email" placeholder="Enter your email" required>
+
+            <label for="customer-phone">Contact Number</label>
+            <input type="tel" id="customer-phone" placeholder="Enter your contact number" required>
+
+            <label for="customer-address">Address</label>
+            <textarea id="customer-address" placeholder="Enter your address" required></textarea>
+        </div>
+
+        <div class="checkout-transpo">
+            <div class="transportation-options">
+                <h2>Choose Your Delivery Method</h2>
+                <img src="photos/landtranspo.png" alt="Land Transportation" onclick="selectTransportation(this)">
+                <img src="photos/airtranspo.jpg" alt="Air Transportation" onclick="selectTransportation(this)">
+                <img src="photos/seatranspo.avif" alt="Sea Transportation" onclick="selectTransportation(this)">
+            </div>
+            <center>
+            <label for="delivery-time">Delivery Time (24-hour format)</label>
+            <input type="text" id="delivery-time" placeholder="HH:MM" pattern="(?:[01]\d|2[0-3]):(?:[0-5]\d)" required>
+            </center>
+        </div>
+
+        <div class="checkout-items">
+            <h2>Items in Cart</h2>
+            <ul id="cart-items">
+            </ul>
+            <div class="checkout-total">
+                Total: ₱<span id="cart-total">0.00</span>
+            </div>
+        </div>
+
+        <button class="checkout-button" onclick="proceedToCheckout()">Proceed to Checkout</button>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        const semiColor = ';';
+        const colon = ':';
+
+        function proceedToCheckout() {
+            const customerName = document.getElementById('customer-name').value;
+            const customerEmail = document.getElementById('customer-email').value;
+            const customerAddress = document.getElementById('customer-address').value;
+            const customerPhone = document.getElementById('customer-phone').value;
+            const deliveryTime = document.getElementById('delivery-time').value;
+            const paymentAmount = document.getElementById('payment-amount').value;
+
+            if (!customerName || !customerEmail || !customerAddress || !customerPhone || !deliveryTime || !paymentAmount) {
+                alert("Please complete all required fields before proceeding.");
+                return;
+            }
+
+            // Generate receipt
+            const receipt = generateReceipt(customerName, customerEmail, customerAddress, customerPhone, deliveryTime, paymentAmount);
+            
+            // Display receipt in alert
+            const confirmation = confirm(receipt + "\n\nProceed with this order?");
+            if (confirmation) {
+                alert("Here is your receipt:\n\n" + receipt + "\n\nDelivery time: " + deliveryTime);
+                // Proceed with checkout
+                localStorage.removeItem('shoppingCart');
+                window.location.href = 'index.html';
+            } else {
+                alert("Cannot be cancelled since it is paid already.\n\nDelivery time: " + deliveryTime);
+            }
+        }
+        document.addEventListener('DOMContentLoaded', updateCheckoutPage);
+    </script>
+</body>
+</html>

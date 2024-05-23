@@ -1,0 +1,466 @@
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&family=Shadows+Into+Light&family=Sixtyfour&family=Tienne:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&family=Shadows+Into+Light&family=Sixtyfour&family=Tienne:wght@400;700;900&family=Whisper&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #fff;
+    background-color: #000;
+    font-weight: 10;
+    scroll-behavior: smooth;
+}
+
+.index{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: #99592A;
+}
+
+.logo{
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    transition: box-shadow 0.5s ease, border-radius 0.5s ease;
+}
+
+.logo:hover{
+    box-shadow: -50px 0px 0px 800px #E6B17E;
+    border-radius: 50%;
+}
+
+.logo .logocup{
+    width: 400px;
+}
+
+.small{
+    width: 100px;
+}
+
+.brand{
+    position: absolute;
+    text-align: center;
+    margin-top: 28%;
+    margin-left: 1.5%;
+    background-color: #E6B17EAA;
+    border-radius: 100px;
+    z-index: 1;
+}
+
+.brandName{
+    font-size: 85px;
+    font-family: "Shadows Into Light", cursive;
+    color: #4D331F;
+    padding: 0 50px;
+}
+
+.slogan{
+    margin-top: -30px;
+    font-size: 40px;
+    font-family: "Whisper", cursive;
+    color: #4D331F;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 30vh;
+    background-image: url(photos/unknown.gif);
+    background-size: cover;
+  }
+
+  .header-text{
+    font-size: 20px;
+    position: relative;
+    pointer-events: none;
+  }
+
+  .header-text h1{
+    color: #E6B17E;
+  }
+
+  .header-text p{
+    color: #000;
+    font-weight: 900;
+    padding-left: 80px;
+  }
+  
+  .header-text .earthhead{
+    position: absolute;
+    transform: translate(-60%, -90%);
+    font-size: 3em;
+  }
+  
+  .header-text .earthhead2{
+    position: absolute;
+    transform: translate(-50%, 10%);
+    font-size: 2em;
+  }
+  
+  a{
+    text-decoration: none;
+  }
+
+nav {
+    background-color: #4D331F;
+    overflow: hidden;
+    text-align: center; 
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-position-x: 0px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.quote{
+    font-family: "Shadows Into Light", cursive;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+nav a{
+    display: inline-block;
+    color: #ECE9E4;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    width: 30%; 
+    font-weight: 900;
+    font-family: "Madimi One", sans-serif;
+    font-size: 20px;
+}
+
+nav a:hover {
+    background-color: #99592A;
+    color: #ECE9E4;
+    font-weight: 900;
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-left: 40px;
+    margin-right: 20px;
+    margin-bottom: 0px;
+}
+  
+img{
+    height: auto;
+    width: auto;
+}
+
+.product-img {
+    width: 300px; 
+    max-width: 350px; 
+    height: 300px; 
+    border-radius: 10px; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.2s ease, box-shadow 0.2s ease; 
+}
+
+.product-img .filler{
+    height: auto;
+}
+
+.product-img:hover {
+    transform: scale(0.9);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); 
+}
+
+.product-img + .product-desc {
+    margin-top: 5px; 
+}
+
+.lower{
+    padding-top: 40px;
+}
+
+.content img{
+    width: 250px;
+    height: 250px;
+    aspect-ratio: 4/9;
+    object-fit: contain;
+}
+
+#cartButton {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background: linear-gradient(to top, #000, #ffffff, #a0522d, #3e3e3e,#000000)
+}
+
+#checkoutButton {
+    position: fixed;
+    bottom: 20px;
+    left: 94%;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background: linear-gradient(to top,#000, #ffffff, #a0522d, #3e3e3e,#000000)
+}
+
+#cart {
+    position: fixed;
+    bottom: 60px;
+    left: 30px;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 700px;
+    max-height: 500px;
+    overflow-y: auto;
+    display: none; 
+    color: #000;
+}
+
+
+.cart-item {
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.product-desc {
+    font-size: 14px; 
+    color: #666; 
+    margin-top: 8px; 
+    text-align: center; 
+    line-height: 1.5; 
+    font-family: 'Arial', sans-serif; 
+}
+
+.product {
+    text-align: center; 
+    padding: 10px; 
+    margin-bottom: 20px; 
+}
+
+.checkout-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto; 
+}
+
+.checkout-title {
+    font-size: 90px;
+    font-family: "Whisper", cursive;
+    text-align: center;
+    color: #f91515; 
+    font-weight: 900;
+    margin-bottom: -60px;
+}
+
+.checkout-form {
+    background-color: #3B2F2F;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px; 
+}
+
+.checkout-form label {
+    font-family: 'Shadows Into Light', cursive;
+    color: #fff;
+}
+
+.checkout-form input,
+.checkout-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-top: 5px;
+    border: 1px solid #3B2F2F;
+    border-radius: 5px;
+}
+
+.checkout-transpo{
+    background-color: #3B2F2F;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.checkout-transpo h2 {
+    font-family: "Whisper", cursive;
+    text-align: center;
+    font-size: 40px;
+    color: #fff;
+}
+
+.checkout-transpo img{
+    width: 30%;
+    aspect-ratio: 3/4;
+    padding-left: 20px;
+    object-fit: contain;
+}
+
+.transportation-options{
+    padding-left: 35px;
+}
+
+.checkout-transpo label {
+    font-family: 'Shadows Into Light', cursive;
+    color: #fff;
+}
+
+.checkout-transpo input {
+    width: 100%;
+    padding: 15px;
+    margin-top: 5px;
+    border: 1px solid #3B2F2F;
+    border-radius: 5px;
+}
+
+.checkout-form input:focus,
+.checkout-form textarea:focus {
+    background: linear-gradient(to top,#ffffff, #a0522d, #3e3e3e,#000000,); 
+}
+
+.checkout-items {
+    margin-top: 20px;
+    background-color: #3B2F2F;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.checkout-items h2 {
+    font-family: "Whisper", cursive;
+    text-align: center;
+    font-size: 40px;
+    color: #fff;
+}
+
+.checkout-items ul {
+    padding-left: 40px;
+}
+
+.checkout-items li {
+    padding: 5px 0;
+}
+
+.checkout-total {
+    font-weight: bold;
+    font-family: 'Tienne', serif;
+    color: #fff;
+    text-align: right; 
+}
+
+.checkout-button {
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-top: 20px;
+    margin-left: 250px;
+    cursor: pointer;
+    background-color: #880808;
+    font-family: "Whisper", cursive;
+    font-size: 40px;
+}
+
+.checkout-button:hover {
+    background: linear-gradient(to bottom,#ffffff, #a0522d, #3e3e3e,#000000,)
+}
+
+.button{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to bottom,#000000,#3e3e3e,#a0522d, #ffffff )
+}
+
+.ship{
+    background-image: url(photos/checkoutback.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: scroll;
+}
+
+.transportation-options img:active {
+    transform: scale(0.9);
+    transition: transform 0.2s ease;
+  }
+
+.aboutToHome{
+    position: relative;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: #E6B17E;
+    font-family: "Whisper", cursive;
+    font-size: 40px;
+    width: 340px;
+}
+
+.about{
+    background-image: url(photos/unknown.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow-y: scroll;
+}
+
+.-title {
+    color: #000;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 18px;
+}
+
+.about-container {
+    width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #E6B17E80;
+    border-radius: 10px;
+    color: #000;
+    font-size: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-title {
+    margin-top: 0;
+    margin-bottom: 40px;
+    font-size: 70px;
+    font-family: "Whisper", cursive;
+}
+
+.about-content {
+    font-weight: 900;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-indent: 80px;
+}
+
+.priceDisplay{
+    color: #fff;
+    margin-bottom: 10px;
+}
